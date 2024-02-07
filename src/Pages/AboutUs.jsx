@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutUs(){
   return (
-    <div className = 'bg-purple-200 bg-cover style={{ backgroundImage: url("../src/assets/.jpg")}}'>
+    <div className = 'bg-green-300 bg-cover style={{ backgroundImage: url("../src/assets/.jpg")}}'>
     <div className="container mx-auto p-8">
       {/* ABOUT */}
       <section id="about" className="mb-8">
@@ -30,8 +30,13 @@ export default function AboutUs(){
         <h2 className="text-3xl font-semibold mb-4 text-center">Gallery</h2>
         <div className="grid grid-cols-3 gap-4">
           <img src="../src/assets/teethh.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 1" />
-          <img src="../src/assets/teeth1.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 1" />
-          <img src="../src/assets/teeth.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 1" />
+          <img src="../src/assets/teeth1.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 2" />
+          <img src="../src/assets/teeth3.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 3" />
+          <img src="../src/assets/teeth 2.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 4" />
+          <img src="../src/assets/bgi1.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 5" />
+          <img src="../src/assets/teeth.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 6" />
+        
+        
         
           {/* Add more images as needed */}
         </div>

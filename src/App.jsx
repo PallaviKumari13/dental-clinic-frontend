@@ -6,9 +6,12 @@ import { Chat } from './Pages/Chat';
 import Home from './Pages/Home';
 import AboutUs from './Pages/AboutUs';
 import Services from './Pages/Services';  
-import Login from './Pages/Login'; 
+import PatientLogin from './Pages/PatientLogin'; 
 import Register from './Pages/Register';
-
+import Dropdown from './Pages/Dropdown';
+import Dashboard from './Pages/Dashboard';
+import AppointmentsCalendar from './Pages/Appointment';
+import ContactUs  from './Pages/ContactUs';
 function App() {
   return (
     <>
@@ -18,8 +21,12 @@ function App() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/login" element={<Login/>} />
+        <Route path="/patientlogin" element={<PatientLogin/>} />
         <Route path="/register" element={<Register/>}/>
+        <Route path="/dropdown" element={<Dropdown/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/appointment" element={<AppointmentsCalendar/>}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
       </Routes>
       <Footer />
     </>

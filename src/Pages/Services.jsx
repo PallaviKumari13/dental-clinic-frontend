@@ -21,7 +21,7 @@ const ServiceCard = ({ price, title, link, delay }) => {
 
 const Services = () => {
   return (
-    <section id="team" className="bg-purple-200 bg-cover"  style={{ backgroundImage: 'url("../src/assets/.jpg")' }}>
+    <section id="team" className="bg-purple-200 bg-cover"  style={{ backgroundImage: 'url("../src/assets/bgi3.avif")' }}>
       <div className="container mx-auto">
         <div className="text-center py-30">
           <h3 className="text-4xl font-bold text-purple-800 mb-30 animate__animated animate__fadeIn animate__delay-1s">Our Speciality</h3>
