@@ -12,6 +12,8 @@ import Dropdown from './Pages/Dropdown';
 import Dashboard from './Pages/Dashboard';
 import AppointmentsCalendar from './Pages/Appointment';
 import ContactUs  from './Pages/ContactUs';
+import EmployeeList from './Pages/EmployeeList';
+
 function App() {
   return (
     <>
@@ -27,6 +29,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/appointment" element={<AppointmentsCalendar/>}/>
         <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/Employeelist" element={<EmployeeList/>}/>
       </Routes>
       <Footer />
     </>

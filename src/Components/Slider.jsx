@@ -8,13 +8,13 @@ export default function Slider() {
     return (
         <Carousel autoPlay showArrows={false} showStatus={false} infiniteLoop stopOnHover={false} showThumbs={false} width={"100%"}>
             <div className=''>
-                <img className='rounded-xl max-h-[80vh]' src="../src/assets/123.jpg" />
+                <img className='rounded- max-h-[80vh]' src="../src/assets/new.jpeg" />
             </div>
             <div>
-                <img className='rounded-xl max-h-[80vh]' src="../src/assets/bgi3.avif" />
+                <img className='rounded-xl max-h-[80vh]' src="../src/assets/new1.jpg" />
             </div>
             <div>
-                <img className='rounded-xl max-h-[80vh]' src="../src/assets/teeth3.jpeg" />
+                <img className='rounded-xl max-h-[80vh]' src="../src/assets/teeth.jpg" />
             </div>
         </Carousel>
     )

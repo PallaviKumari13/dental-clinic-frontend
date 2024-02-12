@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState();
@@ -32,21 +32,22 @@ export default function Login() {
       .catch((error) => alert(error));
   }
 
-  const navigateToRegister = () => {
-    // Implement navigation logic to the register page
-  };
+  
 
   return (
     <div className='flex justify-center self-center h-full items-center'
     style={{
-      backgroundImage: 'url("../src/assets/bgggg.jpg")',
+      backgroundImage: 'url("../src/assets/new.jpeg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
       <div className='p-8 shadow-md rounded-md'>
-        <h2 className='text-2xl font-bold mb-4 '>Login</h2>
+        <h2 className='text-2xl font-bold mb-4 text-gray-900 '>Login</h2>
         <div className='mb-4'>
           <form onSubmit={handleRegister} className='flex flex-col'>
+          <label className="block text-black-900 text-sm font-bold mb-2">
+              Email:
+            </label>
             <input
               required
               type='text'
@@ -55,6 +56,9 @@ export default function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            <label className="block text-black text-sm font-bold mb-2">
+              Password:
+            </label>
             <input
               required
               type='password'
@@ -64,9 +68,8 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type='submit'>SUBMIT</button>
-            <p>
-              Don't have an account?{' '}
-              <span onClick={navigateToRegister}>Register</span>
+            <p className="text-sm mt-2">
+              Don't have an account? <Link to="/register" className="text-green-900">Register here</Link>.
             </p>
           </form>
         </div>

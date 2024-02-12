@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function AboutUs(){
   return (
-    <div className = 'bg-green-300 bg-cover style={{ backgroundImage: url("../src/assets/.jpg")}}'>
+    <div className = 'bg-green-200 bg-cover style={{ backgroundImage: url("../src/assets/new1.jpg")}}'>
     <div className="container mx-auto p-8">
       {/* ABOUT */}
       <section id="about" className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4">Welcome to Krishna Dental Clinic</h2>
+        <h2 className="text-3xl font-semibold mb-4">Welcome to Hope Dental Clinic</h2>
         <p className="text-gray-700">
-          Dr. Krishna Kumar is a highly skilled dentist in Patna, Bihar, with years of experience in examining patients. He maintains, develops, and works with his vast professional knowledge and skills using the latest technology. Dr. Krishna and his staff treat patients like family. His clinic is equipped with the latest tools and technology to provide high-quality care.
+          Dr.Kumar is a highly skilled dentist in Patna, Bihar, with years of experience in examining patients. He maintains, develops, and works with his vast professional knowledge and skills using the latest technology. Dr.Kumar and his staff treat patients like family. His clinic is equipped with the latest tools and technology to provide high-quality care.
         </p>
       </section>
 
@@ -20,7 +20,7 @@ export default function AboutUs(){
         <div className="w-1/2">
           <h2 className="text-2xl font-semibold mb-4 text-center">World-class clinic</h2>
           <p className="text-gray-700">
-            Krishna Dental Clinic utilizes the latest technology and techniques to provide advanced, comprehensive oral healthcare. Equipped with state-of-the-art dental equipment and staffed by highly trained professionals, our clinic offers a wide range of procedures, including complex surgeries, implantology, cosmetic dentistry, orthodontics, and more. We also provide cutting-edge services such as digital dentistry, laser dentistry, and 3D imaging. Our in-house dental lab allows us to create custom dental prostheses like crowns, bridges, dentures, and orthodontic appliances.
+            Hope Dental Clinic utilizes the latest technology and techniques to provide advanced, comprehensive oral healthcare. Equipped with state-of-the-art dental equipment and staffed by highly trained professionals, our clinic offers a wide range of procedures, including complex surgeries, implantology, cosmetic dentistry, orthodontics, and more. We also provide cutting-edge services such as digital dentistry, laser dentistry, and 3D imaging. Our in-house dental lab allows us to create custom dental prostheses like crowns, bridges, dentures, and orthodontic appliances.
           </p>
         </div>
       </section>

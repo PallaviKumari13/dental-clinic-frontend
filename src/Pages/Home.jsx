@@ -12,16 +12,16 @@ import cavity from "../assets/teeth1.jpeg";
 
 const Home = ({Token})  => {
     return (
-        <div className = 'bg-purple-200 '>
+        <div className = 'bg-green-900 '>
         
         <div className='flex justify-center items-center flex-col'>
             <div className='max-h-[80vh] w-[100%]  flex justify-center items-center'>
                 <Slider />
             </div>
             </div>
-            <div className='h-[10vh] flex items-center bg-purple-200 w-full justify-center mt-4'>
+            <div className='h-[10vh] flex items-center bg-green-500 w-full justify-center mt-4'>
                 <h1 className='text-center text-blue-900 text-2xl font-display'>
-                    Better Teeth, <br /> Healthy Teeth.
+                    Better Teeth,  Healthy Teeth.
                 </h1>
             </div>
 
