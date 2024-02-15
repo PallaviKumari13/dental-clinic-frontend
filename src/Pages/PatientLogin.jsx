@@ -32,20 +32,20 @@ export default function Login() {
       .catch((error) => alert(error));
   }
 
-  
+
 
   return (
     <div className='flex justify-center self-center h-full items-center'
-    style={{
-      backgroundImage: 'url("../src/assets/new.jpeg")',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
-      <div className='p-8 shadow-md rounded-md'>
+      style={{
+        backgroundImage: 'url("../src/assets/border2.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+      <div className='p-8 shadow-md'>
         <h2 className='text-2xl font-bold mb-4 text-gray-900 '>Login</h2>
         <div className='mb-4'>
           <form onSubmit={handleRegister} className='flex flex-col'>
-          <label className="block text-black-900 text-sm font-bold mb-2">
+            <label className="block text-black-900 text-sm font-bold mb-2">
               Email:
             </label>
             <input

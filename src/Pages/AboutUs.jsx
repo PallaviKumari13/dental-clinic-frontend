@@ -2,7 +2,12 @@ import React from 'react';
 
 export default function AboutUs(){
   return (
-    <div className = 'bg-green-200 bg-cover style={{ backgroundImage: url("../src/assets/new1.jpg")}}'>
+    <div className='flex justify-center self-center h-full items-center'
+    style={{
+      backgroundImage: 'url("../src/assets/border2.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
     <div className="container mx-auto p-8">
       {/* ABOUT */}
       <section id="about" className="mb-8">
@@ -27,13 +32,13 @@ export default function AboutUs(){
 
       {/* GALLERY */}
       <section id="gallery" className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4 text-center">Gallery</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center">Gallery</h2>
         <div className="grid grid-cols-3 gap-4">
           <img src="../src/assets/teethh.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 1" />
           <img src="../src/assets/teeth1.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 2" />
-          <img src="../src/assets/teeth3.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 3" />
-          <img src="../src/assets/teeth 2.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 4" />
-          <img src="../src/assets/bgi1.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 5" />
+          <img src="../src/assets/new1.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 3" />
+          <img src="../src/assets/bgi.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 4" />
+          <img src="../src/assets/0rtho.webp" className="w-full h-64 object-cover rounded" alt="Gallery 5" />
           <img src="../src/assets/teeth.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 6" />
         
         

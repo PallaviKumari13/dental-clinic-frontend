@@ -10,19 +10,23 @@ import cure from "../assets/bgi2.webp";
 import cavity from "../assets/teeth1.jpeg";
 
 
-const Home = ({Token})  => {
+const Home = ({ Token }) => {
     return (
-        <div className = 'bg-green-900 '>
-        
-        <div className='flex justify-center items-center flex-col'>
-            <div className='max-h-[80vh] w-[100%]  flex justify-center items-center'>
-                <Slider />
+        <div className='bg-green-900 '>
+
+            <div className='flex justify-center items-center flex-col'>
+                <div className='max-h-[80vh] w-[100%]  flex justify-center items-center'>
+                    <Slider />
+                </div>
             </div>
-            </div>
-            <div className='h-[10vh] flex items-center bg-green-500 w-full justify-center mt-4'>
-                <h1 className='text-center text-blue-900 text-2xl font-display'>
-                    Better Teeth,  Healthy Teeth.
-                </h1>
+            <div className='h-[10vh] flex items-center bg-green-700 w-full justify-center mt-4'>
+
+                <img src="../src/assets/lool.jpg" className="w-10 h-10 rounded-full h-10" />
+                <h1 className='text-center text-white text-2xl font-display'>
+
+                    "Better Teeth,  Healthy Teeth "         </h1>
+
+                <img src="../src/assets/lool.jpg" className="w-10 h-10 rounded-full h-10" />
             </div>
 
             <div className='flex flex-row'>

@@ -46,7 +46,7 @@ const ContactUs = () => {
   
 
     return (
-      <div className="bg-green-200 bg-cover" style={{ backgroundImage: 'url("../src/assets/b3.avif")' }}>
+      <div className="bg-green-200 bg-cover" style={{ backgroundImage: 'url("../src/assets/border2.jpg")' }}>
         <div className="container mx-auto py-8">
           <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

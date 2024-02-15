@@ -6,7 +6,7 @@ const AppointmentForm = () => {
         gender: 'Male', // Default gender
         age: '',
         problem: '',
-        doctorName: 'Dr.Kumar', // Default doctor
+        doctorName: 'Dr.Kumar', 
         date: ''
     });
 
@@ -20,15 +20,21 @@ const AppointmentForm = () => {
     };
 
     return (
+        <div className='flex justify-center self-center h-full items-center'
+    style={{
+      backgroundImage: 'url("../src/assets/border2.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="container">
-            <div className="content" style={{ minHeight: '440px', backgroundColor: '#FFFFFF', border: 'none' }}>
+            
                 <div className="form-group">
                     <div className="row">
                         <table>
-                            <tbody>
+                            <body>
                                 <tr>
                                     <td>Patient Name</td>
-                                    <td><input type="text" name="patientName" value={formData.patientName} onChange={handleChange} className="form-control" maxLength="150" /></td>
+                                    <td><input type="text"  name="patientName" value={formData.patientName} onChange={handleChange} className="form-control" maxLength="150" /></td>
                                 </tr>
                                 <tr>
                                     <td>Gender</td>
@@ -56,6 +62,7 @@ const AppointmentForm = () => {
                                     <td>
                                         <select name="doctorName" value={formData.doctorName} onChange={handleChange} className="form-control">
                                             <option value="Dr. Kumar">Dr.kumar</option>
+                                            <option value="Dr. Kumar">Dr.Park</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -69,13 +76,16 @@ const AppointmentForm = () => {
                                 <tr>
                                     <td colSpan="2"><span className="text-danger" id="lblMsg"></span></td>
                                 </tr>
-                            </tbody>
+                            </body>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+        
     );
 }
+
+
 
 export default AppointmentForm;

@@ -36,11 +36,11 @@ const AppointmentForm = () => {
   return (
     <div className='flex justify-center self-center h-full items-center'
     style={{
-      backgroundImage: 'url("../src/assets/new.jpeg")',
+      backgroundImage: 'url("../src/assets/border2.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
-    <div className="max-w-md mx-auto p-8 bg-green-300 rounded shadow-md">
+    <div className="">
       <h2 className="text-xl font-bold mb-4">Book an Appointment</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
