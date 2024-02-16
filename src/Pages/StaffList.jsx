@@ -33,7 +33,7 @@ function StaffList() {
             <div className="flex items-center space-x-4">
               <div className="flex-shrink-0">
                 
-                <img className="h-10 w-10 rounded-full" src={`https://via.placeholder.com/40?text=${staff.name[0]}`} alt={staff.name} />
+                <img className="h-10 w-10 bg-green-300 rounded-full" src={`https://via.placeholder.com/40?text=${staff.name[0]}`} alt={staff.name} />
               </div>
               <div>
                 {/* Staff name */}

@@ -20,7 +20,7 @@ export default function AboutUs(){
       {/* CLINIC */}
       <section id="clinic" className="flex mb-8">
         <div className="w-1/2 pr-4">
-          <img src="../src/assets/teethhh.jpeg" className="w-full h-96 object-cover rounded-10" alt="Clinic Image" />
+          <img src="../src/assets/card1.jpg" className="w-full h-96 object-cover rounded-10" alt="Clinic Image" />
         </div>
         <div className="w-1/2">
           <h2 className="text-2xl font-semibold mb-4 text-center">World-class clinic</h2>
@@ -34,12 +34,12 @@ export default function AboutUs(){
       <section id="gallery" className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-center">Gallery</h2>
         <div className="grid grid-cols-3 gap-4">
-          <img src="../src/assets/teethh.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 1" />
-          <img src="../src/assets/teeth1.jpeg" className="w-full h-64 object-cover rounded" alt="Gallery 2" />
-          <img src="../src/assets/new1.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 3" />
-          <img src="../src/assets/bgi.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 4" />
-          <img src="../src/assets/0rtho.webp" className="w-full h-64 object-cover rounded" alt="Gallery 5" />
-          <img src="../src/assets/teeth.jpg" className="w-full h-64 object-cover rounded" alt="Gallery 6" />
+          <img src="../src/assets/card.jpg" className="w-full h-60 object-cover rounded" alt="Gallery 1" />
+          <img src="../src/assets/teeth1.jpeg" className="w-full h-60 object-cover rounded" alt="Gallery 2" />
+          <img src="../src/assets/new1.jpg" className="w-full h-60 object-cover rounded" alt="Gallery 3" />
+          <img src="../src/assets/bgi.jpg" className="w-full h-60 object-cover rounded" alt="Gallery 4" />
+          <img src="../src/assets/0rtho.webp" className="w-full h-60 object-cover rounded" alt="Gallery 5" />
+          <img src="../src/assets/teeth.jpg" className="w-full h-60 object-cover rounded" alt="Gallery 6" />
         
         
         

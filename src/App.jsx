@@ -6,7 +6,7 @@ import { Chat } from './Pages/Chat';
 import Home from './Pages/Home';
 import AboutUs from './Pages/AboutUs';
 import Services from './Pages/Services';  
-import PatientLogin from './Pages/PatientLogin'; 
+import Login from './Pages/Login'; 
 import Register from './Pages/Register';
 import Dropdown from './Pages/Dropdown';
 import Dashboard from './Pages/Dashboard';
@@ -16,18 +16,19 @@ import StaffList from './Pages/StaffList';
 import Logout from './Pages/Logout';
 import Doctors from './Pages/Doctors'
 import PatientDetails from './Pages/PatientDetails';
-import Admin from './Pages/Admin';
+import More from './Pages/More';
+import Profile from './Pages/Profile'
 import PaymentDetails from './Pages/PaymentDetails'
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path='/Home' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/patientlogin" element={<PatientLogin/>} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>}/>
         <Route path="/dropdown" element={<Dropdown/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
@@ -37,7 +38,8 @@ function App() {
         <Route path="/logout" element={<Logout/>}/>
         <Route path='/Doctors' element={<Doctors/>}/>
         <Route path="/PatientDetails" element={<PatientDetails/>}/>
-        <Route path="/Admin" element={<Admin/>}/>
+        <Route path="/More" element={<More/>}/>
+        <Route path="/Profile" element={<Profile/>}/>
         <Route path="/Paymentdetails" element={<PaymentDetails/>}/>
       </Routes>
       <Footer />

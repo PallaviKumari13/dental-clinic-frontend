@@ -40,92 +40,52 @@ const AppointmentForm = () => {
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
-    <div className="">
-      <h2 className="text-xl font-bold mb-4">Book an Appointment</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-            Name
-          </label>
-          <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="name"
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-            Email
-          </label>
-          <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="email"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-            Phone
-          </label>
-          <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="phone"
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="date">
-            Date
-          </label>
-          <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="date"
-            type="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="time">
-            Time
-          </label>
-          <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="time"
-            type="time"
-            name="time"
-            value={formData.time}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="flex items-center justify-between">
-          <button
-            className="bg-green-500 hover:bg-green-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Book Appointment
-          </button>
+       <div className="container mx-auto">
+      <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto">
+        <div className="bg-green shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div className="mb-4">
+            <label htmlFor="patientName" className="block text-gray-700 text-sm font-bold mb-2">Patient Name</label>
+            <input type="text" id="patientName" name="patientName" value={formData.patientName} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Patient Name" required />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="gender" className="block text-gray-700 text-sm font-bold mb-2">Gender</label>
+            <select id="gender" name="gender" value={formData.gender} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div className="mb-4">
+            <label htmlFor="age" className="block text-gray-700 text-sm font-bold mb-2">Age</label>
+            <input type="text" id="age" name="age" value={formData.age} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Age" required />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="problem" className="block text-gray-700 text-sm font-bold mb-2">Problem</label>
+            <textarea id="problem" name="problem" value={formData.problem} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Problem" required></textarea>
+          </div>
+          <div className="mb-4">
+            <label htmlFor="doctorName" className="block text-gray-700 text-sm font-bold mb-2">Doctor Name</label>
+            <select id="doctorName" name="doctorName" value={formData.doctorName} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+              <option value="Dr. Kumar">Dr. Kumar</option>
+              <option value="Dr. Park">Dr. Park</option>
+              {/* Add other doctor options as needed */}
+            </select>
+          </div>
+          <div className="mb-4">
+            <label htmlFor="date" className="block text-gray-700 text-sm font-bold mb-2">Date</label>
+            <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="time" className="block text-gray-700 text-sm font-bold mb-2">Time</label>
+            <input type="time" id="time" name="time" value={formData.date} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
+          </div>
+          <div className="flex items-center justify-between">
+            <button type="submit" className="bg-green-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Book Appointment</button>
+          </div>
         </div>
       </form>
-      {message && <p className="text-sm mt-4 text-gray-600">{message}</p>}
     </div>
     </div>
   );
-};
-
+}
+    
 export default AppointmentForm;

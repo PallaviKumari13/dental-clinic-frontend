@@ -1,32 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function Profile() {
-  return (
-    <div className='flex justify-center self-center h-full items-center'
-    style={{
-      backgroundImage: 'url("../src/assets/new.jpeg")',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
-    <div className="max-w-md mx-80 mt-60 bg-green-200 shadow-md rounded-lg overflow-hidden">
-      <div className="md:flex">
-        <div className="md:flex-shrink-0">
-          <img className="h-40 w-full object-cover md:w-40" src="../src/assets/login.png" alt="Profile" />
+const ProfilePage = ({ userId }) => {
+    const [userData, setUserData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+            try {
+                const response = await axios.get(`/api/users/${userId}`);
+                setUserData(response.data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+
+        fetchUserData();
+    }, [userId]);
+
+    return (
+        <div>
+            <h2>Profile</h2>
+            {loading ? (
+                <p>Loading...</p>
+            ) : userData ? (
+                <div>
+                    <p><strong>Name:</strong> {userData.name}</p>
+                    <p><strong>Email:</strong> {userData.email}</p>
+                    <p><strong>Phone Number:</strong> {userData.phone}</p>
+                    {/* Add more user details here */}
+                </div>
+            ) : (
+                <p>No user data found</p>
+            )}
         </div>
-        <div className="p-8">
-          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Name</div>
-          <p className="text-gray-800">----</p>
-          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold mt-4">Email</div>
-          <p className="text-gray-800">-----</p>
-          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold mt-4">Bio</div>
-          <p className="text-gray-800">-----</p>
-          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold mt-4">Number</div>
-          <p className="text-gray-800">-----</p>
-        </div>
-      </div>
-    </div>
-    </div>
-  );
+    );
 }
 
-export default Profile;
+export default ProfilePage;

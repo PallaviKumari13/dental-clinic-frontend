@@ -63,7 +63,7 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="mt-8">
-            <h2 className="text-xl font-bold mb-2">Send us a Message</h2>
+            <h2 className="text-xl font-bold mb-2">Feedback</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>

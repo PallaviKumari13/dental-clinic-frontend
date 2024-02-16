@@ -5,9 +5,10 @@ import { Carousel } from 'react-responsive-carousel';
 import Slider from '../Components/Slider';
 import Card from '../Components/Card';
 import Footer from '../Components/Footer';
-import treatment from "../assets/teethh.jpeg";
-import cure from "../assets/bgi2.webp";
-import cavity from "../assets/teeth1.jpeg";
+import treatment from "../assets/carrd.jpg";
+import cure from "../assets/caard.jpg";
+import cavity from "../assets/ccard.png";
+import Cleaning from "../assets/card2.png";
 
 
 const Home = ({ Token }) => {
@@ -33,6 +34,7 @@ const Home = ({ Token }) => {
                 <Card title={"Braces"} image={treatment} />
                 <Card title={"Teeth Filling"} image={cure} />
                 <Card title={"Cavities"} image={cavity} />
+                <Card title={"Cleaning"} image={Cleaning} />
             </div>
         </div>
     );
