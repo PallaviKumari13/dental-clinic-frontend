@@ -31,18 +31,23 @@ function AdminDashboard() {
               </a>
             </li>
             <li>
-            <a href="/StaffList" className="block py-2 px-3 text-green-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                StaffList
+            <a href="/StaffList" className="block py-4 px-3 text-green-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Staff 
               </a>         
            </li>
            <li>
             <a href="/PaymentDetails" className="block py-2 px-4 text-green-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                PaymentDetails
+                Payment Details
               </a>
             </li> 
             <li>
             <a href="/Profile" className="block py-2 px-3 text-green-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                 Profile
+              </a>
+            </li>
+            <li>
+              <a href="/PatientDetails" className="block py-2 px-4 text-green-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Patient Details
               </a>
             </li>
             <li>

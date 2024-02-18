@@ -12,7 +12,7 @@ function Doctors() {
     <div className='bg-green-200'>
       <h2 className="text-3xl font-bold mb-6">Doctor Details</h2>
       <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
+        <head className="bg-gray-50">
           <tr>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
@@ -20,8 +20,8 @@ function Doctors() {
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact</th>
             {/* Add more table headers as needed */}
           </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
+        </head>
+        <body className="bg-white divide-y divide-gray-200">
           {doctors.map(doctor => (
             <tr key={doctor.id}>
               <td className="px-6 py-4 whitespace-nowrap">{doctor.id}</td>
@@ -31,7 +31,7 @@ function Doctors() {
               {/* Add more table cells for other details */}
             </tr>
           ))}
-        </tbody>
+        </body>
       </table>
     </div>
   );

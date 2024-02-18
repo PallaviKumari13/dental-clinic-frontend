@@ -7,9 +7,9 @@ function StaffList() {
   useEffect(() => {
     // Simulated staff data
     const mockStaffData = [
-      { id: 1, name: 'Kim', position: 'Dentist' },
-      { id: 2, name: 'Rima', position: 'Hygienist' },
-      { id: 3, name: 'Nick', position: 'Assistant' },
+      { id: 1, name: 'Kim', position: 'Dentist' , contact: 6754329868 ,gender:'female'},
+      { id: 2, name: 'Rima', position: 'Hygienist' ,contact: 8776629867 ,gender:'female' },
+      { id: 3, name: 'Nick', position: 'Assistant' ,contact: 6984569845 ,gender:'male'},
       
     ];
 
@@ -20,7 +20,7 @@ function StaffList() {
   return (
     <div className='flex justify-center self-center h-full items-center'
     style={{
-      backgroundImage: 'url("../src/assets/new.jpeg")',
+      backgroundImage: 'url("../src/assets/border2.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
@@ -40,6 +40,8 @@ function StaffList() {
                 <p className="text-lg font-semibold">{staff.name}</p>
                 {/* Staff position */}
                 <p className="text-green-900">{staff.position}</p>
+                <p className="text-green-900">{staff.contact}</p>
+                <p className="text-green-900">{staff.gender}</p>
               </div>
             </div>
           </li>

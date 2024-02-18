@@ -20,6 +20,12 @@ const ProfilePage = ({ userId }) => {
     }, [userId]);
 
     return (
+        <div className='flex justify-center self-center h-full items-center'
+      style={{
+        backgroundImage: 'url("../src/assets/border2.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
         <div>
             <h2>Profile</h2>
             {loading ? (
@@ -27,6 +33,8 @@ const ProfilePage = ({ userId }) => {
             ) : userData ? (
                 <div>
                     <p><strong>Name:</strong> {userData.name}</p>
+                    <p><strong>Age:</strong> {userData.age}</p>
+                    <p><strong>Gender:</strong> {userData.gender}</p>
                     <p><strong>Email:</strong> {userData.email}</p>
                     <p><strong>Phone Number:</strong> {userData.phone}</p>
                     {/* Add more user details here */}
@@ -34,6 +42,7 @@ const ProfilePage = ({ userId }) => {
             ) : (
                 <p>No user data found</p>
             )}
+        </div>
         </div>
     );
 }

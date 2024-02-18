@@ -16,7 +16,7 @@ import StaffList from './Pages/StaffList';
 import Logout from './Pages/Logout';
 import Doctors from './Pages/Doctors'
 import PatientDetails from './Pages/PatientDetails';
-import More from './Pages/More';
+import Admin from './Pages/Admin';
 import Profile from './Pages/Profile'
 import PaymentDetails from './Pages/PaymentDetails'
 function App() {
@@ -38,7 +38,7 @@ function App() {
         <Route path="/logout" element={<Logout/>}/>
         <Route path='/Doctors' element={<Doctors/>}/>
         <Route path="/PatientDetails" element={<PatientDetails/>}/>
-        <Route path="/More" element={<More/>}/>
+        <Route path="/Admin" element={<Admin/>}/>
         <Route path="/Profile" element={<Profile/>}/>
         <Route path="/Paymentdetails" element={<PaymentDetails/>}/>
       </Routes>
