@@ -1,36 +1,34 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Import Link for routing
 
-export default function Register() {
-  const [name, setName] = useState('');
-  const [phoneNo, setPhoneNo] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const RegistrationForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phoneNo: '',
+    email: '',
+    password: ''
+  });
 
-  function handleRegister(e) {
+  const { name, phoneNo, email, password } = formData;
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const body = { name, phoneNo, email, password };
-    fetch("http://localhost:3000/Register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(body)
-    })
-      .then(response => {
-        if (response.status === 201) {
-          return response.json();
-        } else {
-          alert("Response Was Not Successful");
-          throw new Error(response.statusText);
-        }
-      })
-      .then(json => {
-        alert(json.message);
-        // Redirect to login page
-      })
-      .catch(error => alert(error));
-  }
+    // Here you can perform validation and submit data to the server
+    console.log(formData); // For demonstration, logging form data
+    // Assuming successful registration, you can show a success message
+    alert('Registration successful!');
+    // Optionally, reset the form
+    setFormData({
+      name: '',
+      phoneNo: '',
+      email: '',
+      password: ''
+    });
+  };
 
   return (
     <div className='flex justify-center self-center h-full items-center'
@@ -43,7 +41,7 @@ export default function Register() {
         <div className="p-6 ">
           <h2 className="text-2xl font-bold mb-4">Register</h2>
           <div className="mb-4">
-            <form onSubmit={handleRegister} className="flex flex-col">
+            <form onSubmit={handleSubmit} className="flex flex-col">
               <label className="block text-black-900 text-sm font-bold mb-2">
                 Name:
               </label>
@@ -52,8 +50,9 @@ export default function Register() {
                 type="text"
                 className="bg-purple-200 text-purple-900 rounded-md m-2"
                 placeholder="Enter your name"
+                name="name"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleChange}
               />
               <label className="block text-black-900 text-sm font-bold mb-2">
                 Phone no:
@@ -63,8 +62,9 @@ export default function Register() {
                 type="tel"
                 className="bg-purple-200 text-purple-900 rounded-md m-2"
                 placeholder="Enter your number"
+                name="phoneNo"
                 value={phoneNo}
-                onChange={(e) => setPhoneNo(e.target.value)}
+                onChange={handleChange}
               />
               <label className="block text-black-900 text-sm font-bold mb-2">
                 Email:
@@ -74,8 +74,9 @@ export default function Register() {
                 type="email"
                 className="bg-purple-200 text-purple-900 rounded-md m-2"
                 placeholder="Enter your email"
+                name="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleChange}
               />
               <label className="block text-black-900 text-sm font-bold mb-2">
                 Password:
@@ -85,8 +86,9 @@ export default function Register() {
                 type="password"
                 className="bg-purple-200 text-purple-900 rounded-md m-2"
                 placeholder="Enter your password"
+                name="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={handleChange}
               />
               <button type="submit" className="bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 SUBMIT
@@ -100,4 +102,6 @@ export default function Register() {
       </div>
     </div>
   );
-}
+};
+
+export default RegistrationForm;

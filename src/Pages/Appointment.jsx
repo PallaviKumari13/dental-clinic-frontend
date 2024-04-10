@@ -10,28 +10,26 @@ const AppointmentForm = () => {
     time: "",
   });
   const [message, setMessage] = useState("");
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post("/dental-clinic/slot/", formData);
-      setMessage(response.data.message);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        date: "",
-        time: "",
-      });
-    } catch (error) {
-      setMessage("Failed to make an appointment. Please try again.");
-      console.error(error);
-    }
+    // Here you can perform validation and submit data to the server
+    console.log(formData); // For demonstration, logging form data
+    // Assuming successful registration, you can show a success message
+    alert('Appointment successful!');
+    // Optionally, reset the form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      date: "",
+      time: "",
+    });
   };
+
 
   return (
     <div className='flex justify-center self-center h-full items-center'
@@ -75,9 +73,18 @@ const AppointmentForm = () => {
             <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
           </div>
           <div className="mb-4">
-            <label htmlFor="time" className="block text-gray-700 text-sm font-bold mb-2">Time</label>
-            <input type="time" id="time" name="time" value={formData.date} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
-          </div>
+  <label htmlFor="time" className="block text-gray-700 text-sm font-bold mb-2">Time</label>
+  <input 
+    type="time" 
+    id="time" 
+    name="time" 
+    value={formData.time} 
+    onChange={handleChange} 
+    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+    required 
+  />
+</div>
+
           <div className="flex items-center justify-between">
             <button type="submit" className="bg-green-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Book Appointment</button>
           </div>
